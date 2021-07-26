@@ -65,7 +65,7 @@ namespace MSAYearbook.GraphQL.Students
 
                 student = new Student
                 {
-                    Name = user.Name,
+                    Name = user.Name ?? user.Login,
                     GitHub = user.Login,
                     ImageURI = user.AvatarUrl,
                 };
