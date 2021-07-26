@@ -75,6 +75,8 @@ namespace MSAYearbook
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors("MyPolicy");
+
             app.UseRouting();
 
             app.UseAuthentication();
