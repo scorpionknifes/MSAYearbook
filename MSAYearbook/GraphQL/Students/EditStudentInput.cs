@@ -1,6 +1,6 @@
 ﻿namespace MSAYearbook.GraphQL.Students
 {
-    public record EditStudentInput(
+    public record EditSelfInput(
         string? Name,
         string? ImageURI);
 }

@@ -24,7 +24,7 @@ namespace MSAYearbook.GraphQL.Students
     {
         [UseAppDbContext]
         [Authorize]
-        public async Task<Student> EditStudentAsync(EditStudentInput input, ClaimsPrincipal claimsPrincipal,
+        public async Task<Student> EditSelfAsync(EditSelfInput input, ClaimsPrincipal claimsPrincipal,
                 [ScopedService] AppDbContext context, CancellationToken cancellationToken)
         {
             var studentIdStr = claimsPrincipal.Claims.First(c => c.Type == "studentId").Value;
