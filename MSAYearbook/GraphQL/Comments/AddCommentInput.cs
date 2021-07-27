@@ -1,9 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using HotChocolate;
+using HotChocolate.Types;
 
 namespace MSAYearbook.GraphQL.Comments
 {
     public record AddCommentInput(
         string Content,
-        [property: Key]
+        [GraphQLType(typeof(NonNullType<IdType>))]
         string ProjectId);
 }
